@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Obtener documentos</title>
+
+  <link rel="stylesheet" href="/bootstrap/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="/css/style.css">
+
+  <script type="text/javascript">
+
+    function verificatam(){
+      const arch = document.getElementById("imgup");
+      var sizeByte = parseInt(arch.files[0].size);
+      var siezekiloByte = parseInt(sizeByte / 1024);
+      var tamax=parseInt(arch.getAttribute("size"));
+      if (siezekiloByte > tamax) {
+        alert('El peso del archivo que intentas subir supera el límite permitido');
+        arch.value='';
+      }
+    }
+
+  </script>
+
+</head>
+
+<body class="p-5">
+  <h1 class="text-center">Nueva imagen</h1>
+  <div class="container p-5 w-50 border">
+    <form action="/imagen" method="POST" enctype="multipart/form-data">
+      <div class="row my-3">
+        <div class="col-4">
+          <h4>Imagen:</h4>
+        </div>
+        <div class="col-6">
+          <input id="imgup" type="file" accept=".gif,.jpg,.jpeg,.png" name="foto" size="5000" required  onchange="verificatam();" )/>
+        </div>
+      </div>
+      <div class="row my-3">
+        <div class="col-4">
+          <h4>Posición:</h4>
+        </div>
+        <div class="col-6">
+          <input class="form-control" type="number" name="posicion" />
+        </div>
+      </div>
+
+      <input class="btn btn-light" type="submit" value="Subir imagen" />
+    </form>
+  </div>
+</body>
+
+</html>

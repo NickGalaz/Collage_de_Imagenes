@@ -1,0 +1,14 @@
+1.-Para iniciar el proyecto
+    npm init -y
+
+2.- Instalar express, express-fileupload, bootstrap (Debe ser la version 4) y express-fileupload
+
+    npm i express express-fileupload bootstrap@4 
+
+3.- Se resolvio controlar el tamaño maximo del archivo a subir tambien por el lado del cliente ya que 
+    el servidor se comportaba en forma inesperada al seleccionar un archivo de mayor tamaño a lo permitido
+
+    La funcion "verificatam" controla el tamaño permitido incorporada a formulario.html.
+
+
+    Nota: las notas 1 y 2 son para esclarecer las herramientas utilizadas y pasos a todos los integrantes.
