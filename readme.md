@@ -1,7 +1,7 @@
 # Desafío: Collage de Imágenes
 
 ### Módulo 8
-### Framework Express
+### Framework Expres
 
 ## Unidad: 2 - Desafío 3
 
